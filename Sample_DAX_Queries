@@ -1,0 +1,13 @@
+//Sample DAX Queries Used
+
+//create date column
+date = DATE('TableName'[Year], 'TableName'[Month], 'TableName'[Day])
+
+//TotalAmt Column
+TotalSales = 'TableName'[Units Sold] * 'TableName'[Price Per Unit]
+
+//Total Sales Measure
+Total Sales = SUM('TableName'[TotalAmt])
+
+//istinct customers measure
+DistinctCustomers = DISTINCTCOUNT('TableName'[Customer Name])
